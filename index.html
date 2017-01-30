@@ -17,106 +17,108 @@
   </head>
   <body>
     <div class="container">
-      <div class="main_content">
+      <div class="splash">
 
       <!-- Splash page content -->
 
 
-      <h1 id="welcome">Welcome to Restaurant Selector!</h1>
+        <h1 id="welcome">Welcome to Restaurant Selector!</h1>
 
-      <h3 class="panel-heading">What is Restaurant Selector?</h3>
-      <p id="main_description">Ever wish you had a reliable friend you trusted in every city to recommend a restaurant for you?  Tired of sifting through verious websites looking for a good restaurant to check out?  We are that friend, well sort of.  Restaurant selector wants to limit the amount of time you spend researching your next trip sifting through websites and options within those websites.  Fill out your profile with preferences and see what Restaurant Selector can do for you!</p>
-      <div class="cta">
-        <label for="button">Create your profile now!</label> <br>
-        <button type="button" name="button" class="btn" id="button">Get started</button>
+        <h3 class="panel-heading">What is Restaurant Selector?</h3>
+        <p id="main_description">Ever wish you had a reliable friend you trusted in every city to recommend a restaurant for you?  Tired of sifting through verious websites looking for a good restaurant to check out?  We are that friend, well sort of.  Restaurant selector wants to limit the amount of time you spend researching your next trip sifting through websites and options within those websites.  Fill out your profile with preferences and see what Restaurant Selector can do for you!</p>
+        <div class="cta">
+          <label for="button">Create your profile now!</label> <br>
+          <button type="button" name="button" class="btn" id="button">Get started</button>
+        </div>
       </div>
+    </div>
 
-      <!-- End splash page content, begin form content -->
+    <!-- End splash page content, begin form content -->
 
-      <div class="form_content">
+    <div class="form_content">
 
-        <div class="jumbotron">
-          <h1>Enter Your Information:</h1>
+      <h1>Enter Your Information:</h1>
+
+      <form id="user_input_form">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" name="name">
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for"cuisine">Type of cuisine:</label><br>
+              <input type="checkbox" name="cuisine" value="italian"> <span>Italian</span><br>
+              <input type="checkbox" name="cuisine" value="mexican"> <span>Mexican</span><br>
+              <input type="checkbox" name="cuisine" value="thai"> <span>Thai</span><br>
+            </div>
+          </div>
         </div>
 
-        <form id="user_input_form">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" name="name">
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for"cuisine">Type of cuisine:</label><br>
-                <input type="checkbox" name="cuisine" value="italian"> Italian<br>
-                <input type="checkbox" name="cuisine" value="mexican"> Mexican<br>
-                <input type="checkbox" name="cuisine" value="thai"> Thai<br>
-              </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="delivery">Do you want delivery?</label><br>
+              <input type="radio" name="delivery" value="yes"> <span>Yes</span><br>
+              <input type="radio" name="delivery" value="no"> <span>No</span><br>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="delivery">Do you want delivery?</label><br>
-                <input type="radio" name="delivery" value="yes"> Yes<br>
-                <input type="radio" name="delivery" value="no"> No<br>
-              </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="price">Price:</label>
+              <select name="price">
+                <option name="price" value="1"><span>$</span></option>
+                <option name="price" value="2"><span>$$</span></option>
+                <option name="price" value="3"><span>$$$</span></option>
+                <option name="price" value="4"><span>$$$$</span></option>
+              </select>
             </div>
+          </div>
+        </div>
 
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="price">Price:</label>
-                <select name="price">
-                  <option name="price" value="1">$</option>
-                  <option name="price" value="2">$$</option>
-                  <option name="price" value="3">$$$</option>
-                  <option name="price" value="4">$$$$</option>
-                </select>
-              </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="bar">Libations:</label> <br>
+              <input type="radio" name="libations" value="full-bar"> <span>Full Bar</span> <br>
+              <input type="radio" name="libations" value="wine-beer"> <span>Wine and Beer</span> <br>
+              <input type="radio" name="libations" value="either"> <span>I really don't care.</span> <br>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="bar">Libations:</label> <br>
-                <input type="radio" name="libations" value="full-bar"> Full Bar <br>
-                <input type="radio" name="libations" value="wine-beer"> Wine and Beer <br>
-                <input type="radio" name="libations" value="either"> I really don't care. <br>
-              </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="cta">
+              <label for="submit">Search for restaurants</label><br>
+              <button type="submit" class="btn" name="button">Submit</button>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <label for="submit">Find me a restaurant!</label>
-              <button type="submit" name="button">Submit</button>
-            </div>
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
+    </div>
 
       <!-- End form content, begin output content -->
 
-      <div class="output_content">
-        <div class="col-sm-6">
-          <div class="well">
-            <h3><span class="user_name"></span>, based on your preferences, we recommenend:</h3>
-            <ul id="rest-list">
-              <!-- Output with matches will go here -->
-            </ul>
-          </div>
+    <div class="output_content">
+      <div class="col-sm-6">
+        <div class="well">
+          <h3><span class="user_name"></span>, based on your preferences, we recommenend:</h3>
+          <ul id="rest-list">
+            <!-- Output with matches will go here -->
+          </ul>
         </div>
-        <!-- <div class="col-sm-6">
-          <h3><span class="rest-name"></span></h3>
-          <p>Type of cuisine: <span class="cuisine_type"></span></p>
-          <p>Delivery: <span class="delivery"></span></p>
-          <p>Price: <span class="price"></span></p>
-          <p>Alcohol: <span class="alcohol"></span></p>
-        </div> -->
       </div>
+      <!-- <div class="col-sm-6">
+        <h3><span class="rest-name"></span></h3>
+        <p>Type of cuisine: <span class="cuisine_type"></span></p>
+        <p>Delivery: <span class="delivery"></span></p>
+        <p>Price: <span class="price"></span></p>
+        <p>Alcohol: <span class="alcohol"></span></p>
+      </div> -->
     </div>
   </body>
 </html>

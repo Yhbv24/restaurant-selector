@@ -67,7 +67,7 @@ $(function(){
   })
   $("form#user_input_form").submit(function(event){
     event.preventDefault();
-    var userName = $("#user_name").val();
+    var userName = $("input[name=name]").val();
     var userDelivery = $("input[name=delivery]:checked").val();
     var userCuisine = [];
     var userPrice = $("select").val();
@@ -96,5 +96,14 @@ $(function(){
     }
     $(".rest-name").append(user.userName);
 
+    $('li').click(function() {
+      console.log("jsdlkfjs");
+    });
   });
+
+  // $(document).on('click','li', function() {
+  //   console.log("clicked");
+
+
+  // });
 });

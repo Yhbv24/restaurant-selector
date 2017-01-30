@@ -81,5 +81,15 @@ $(function(){
     var user = new UserMaker(userDelivery,userCuisine,userLibations,userPrice,userName,userAddress);
 
     console.log(user);
+    $(".form_content").hide();
+    $(".output_content").show();
+
+    $(".user_name").append(user.userName);
+
+    var displayArray = user.dataChecker();
+    for(i=0;i<5;i++){
+      $("#rest-list").append(displayArray[i])
+    }
+
   });
 });

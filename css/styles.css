@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   background-image: url(../img/seating.jpg);
   background-size: cover;
@@ -6,10 +10,31 @@ body {
   color: #e5dfda;
 }
 
-#welcome {
-  font-size: 5em;
+#text{
+  color: black;
+}
+
+.form_content,
+.output_content {
+  text-align: center;
   margin-left: 70px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.form_content h1 {
+  margin-bottom: 2em;
+}
+
+#welcome, .form_content h1 {
+  font-size: 5em;
   margin-top: 70px;
+  text-shadow: 2px 2px 4px black;
+
+}
+
+.panel-heading {
+  text-shadow: 2px 2px 4px black;
+
 }
 
 #main_description {
@@ -40,4 +65,12 @@ body {
 
 .output_content {
   display: none;
+}
+
+.form-group label {
+  font-size: 1.5em;
+}
+
+.form-group span {
+  font-size: 1.3em;
 }

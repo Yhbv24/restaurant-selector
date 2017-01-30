@@ -1,6 +1,6 @@
 body {
   background-image: url(../img/seating.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Josefin Sans', sans-serif;
   color: #e5dfda;
@@ -21,14 +21,14 @@ body {
   font-size: 1.5em;
 }
 
-.button_group {
+.cta {
   text-align: center;
   margin-top: 300px;
   font-size: 3em;
   color: #0e0b09;
 }
 
-.button_group button {
+.cta button {
   border-radius: 10px;
   font-size: 1em;
   background-color: #ecb84e;

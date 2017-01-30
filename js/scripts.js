@@ -79,8 +79,10 @@ $(function(){
     })
 
     var user = new UserMaker(userDelivery,userCuisine,userLibations,userPrice,userName,userAddress);
-    var japanese = new RestMaker(false,"Japanese","wine-beer",4,"japanese Place", "234 ave");
-    allRestaurants.push(japanese)
+    var japanese = new RestMaker(false,"Japanese","wine-beer",4,"japanese Place", "Japanese", "imgsrc", "234 ave");
+    var chinese = new RestMaker(true,"Chinese","wine-beer",3,"Chinese Place", "Chinese", "imgsrc", "234 ave");
+    allRestaurants.push(japanese,chinese)
+
 
     // console.log(user);
     $(".form_content").hide();
@@ -88,22 +90,29 @@ $(function(){
 
     $(".user_name").append(user.userName);
 
-
+    var liID = 0
     var displayArray = user.dataChecker();
-    console.log(displayArray);
-    for(i=0;i<1;i++){
-      $("#rest-list").append("<li id='" + displayArray[i].restName + "'>" + displayArray[i].restName + "</li>")
+    for(i=0;i<2;i++){
+      $("#rest-list").append("<li id='" + liID + "'>" + displayArray[i].restName + "</li>")
+      liID ++;
     }
     $(".rest-name").append(user.userName);
 
     $('li').click(function() {
-      console.log("jsdlkfjs");
+      if ($(this).children().length === 0){
+        $("#"+this.id).append("<ul class='"+this.id+"'></ul>");
+        $("."+this.id).append("<li>"+ displayArray[this.id].delivery+"</li>");
+        $("."+this.id).append("<li>"+ displayArray[this.id].cost+"</li>");
+        $("."+this.id).append("<li>"+ displayArray[this.id].bar+"</li>");
+        $("."+this.id).append("<li>"+ displayArray[this.id].cuisine+" food</li>");
+        $("."+this.id).append("<li>"+ displayArray[this.id].about+"</li>");
+        $("."+this.id).append("<li>"+ displayArray[this.id].address+"</li>");
+
+
+      }else {
+        $(this).children().remove();
+      }
+
     });
   });
-
-  // $(document).on('click','li', function() {
-  //   console.log("clicked");
-
-
-  // });
 });

@@ -34,7 +34,6 @@
             <label for="button">Create your profile now!</label>
             <button type="button" name="button" id="button">Get started!</button>
           </div>
-</div>
         </div>
       </div>
 
@@ -94,15 +93,35 @@
                 <input type="radio" name="libations" value="wine-beer"> Wine and Beer <br>
                 <input type="radio" name="libations" value="either"> I really don't care. <br>
               </div>
-
             </div>
-
           </div>
-          <div class="col-sm-12">
-            <label for="submit">Find me a restaurant!</label>
-            <button type="submit" name="button">Submit</button>
+          <div class="row">
+            <div class="col-sm-12">
+              <label for="submit">Find me a restaurant!</label>
+              <button type="submit" name="button">Submit</button>
+            </div>
           </div>
         </form>
+      </div>
+
+      <!-- End form content, begin output content -->
+
+      <div class="output_content">
+        <div class="col-sm-6">
+          <div class="well">
+            <h3><span class="user_name"></span>, based on your preferences, we recommenend:</h3>
+            <ul id="rest-list">
+              <!-- Output with matches will go here -->
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <h3><span class="rest-name"></span></h3>
+          <p>Type of cuisine: <span class="cuisine_type"></span></p>
+          <p>Delivery: <span class="delivery"></span></p>
+          <p>Price: <span class="price"></span></p>
+          <p>Alcohol: <span class="alcohol"></span></p>
+        </div>
       </div>
     </div>
   </body>

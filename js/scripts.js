@@ -43,9 +43,17 @@ UserMaker.prototype.dataChecker = function(){
 
 }
 
-var user = new UserMaker(true,["Thai","Chinese","Japanese","BBQ"],false,4,"Matt","123 st");
-var chinese = new RestMaker(true,"Chinese",false,4,"Chinese Place", "234 ave");
-var burger = new RestMaker(false,"Burgers",false,3,"Burger Place", "234 ave");
-var japanese = new RestMaker(false,"Japanese",false,4,"japanese Place", "234 ave");
+// var user = new UserMaker(true,["Thai","Chinese","Japanese","BBQ"],false,4,"Matt","123 st");
+// var chinese = new RestMaker(true,"Chinese",false,4,"Chinese Place", "234 ave");
+// var burger = new RestMaker(false,"Burgers",false,3,"Burger Place", "234 ave");
+// var japanese = new RestMaker(false,"Japanese",false,4,"japanese Place", "234 ave");
 
-allRestaurants.push(chinese,burger,japanese)
+// allRestaurants.push(chinese,burger,japanese)
+
+
+$(function(){
+  $("form#user_input_form").submit(function(){
+
+
+  });
+});

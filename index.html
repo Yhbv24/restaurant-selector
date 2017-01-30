@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  <script src="js/scripts.js" type="text/javascript">
+
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8">
+    <title>Restaurant Selector</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main_content">
+
+      <!-- Splash page content -->
+
+      <div class="jumbotron">
+        <h1>Welcome to Restaurant Selector!</h1>
+      </div>
+      <div class="well">
+        <div class="panel">
+          <div class="panel-title">
+            <h3 class="panel-heading">What is Restaurant Selector?</h3>
+          </div>
+          <div class="panel-body">
+            <p>Ever go to a city your friends just went to and they said "Hey you GOTTA check out this x, y, z because they know what you like and don't like?"  Restaurant selector wants to limit the amount of time you spend researching your next trip sifting through websites and options within those websites.  Fill out your profile with preferences and see what Restaurant Selector can do for you!</p>
+          </div>
+          <div class="cta">
+            <label for="button">Create your profile now!</label>
+            <button type="button" name="button" id="button">Get started!</button>
+          </div>
+</div>
+        </div>
+      </div>
+
+      <!-- End splash page content, begin form content -->
+
+      <div class="form_content">
+
+        <div class="jumbotron">
+          <h1>Enter Your Information:</h1>
+        </div>
+
+        <form id="user_input_form">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name">
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for"cuisine">Type of cuisine:</label><br>
+                <input type="checkbox" name="cuisine" value="italian"> Italian<br>
+                <input type="checkbox" name="cuisine" value="mexican"> Mexican<br>
+                <input type="checkbox" name="cuisine" value="thai"> Thai<br>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="delivery">Do you want delivery?</label><br>
+                <input type="radio" name="delivery" value="yes"> Yes<br>
+                <input type="radio" name="delivery" value="no"> No<br>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="price">Price:</label>
+                <select name="price">
+                  <option name="price" value="1">$</option>
+                  <option name="price" value="2">$$</option>
+                  <option name="price" value="3">$$$</option>
+                  <option name="price" value="4">$$$$</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="bar">Libations:</label> <br>
+                <input type="radio" name="libations" value="full-bar"> Full Bar <br>
+                <input type="radio" name="libations" value="wine-beer"> Wine and Beer <br>
+                <input type="radio" name="libations" value="either"> I really don't care. <br>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-sm-12">
+            <label for="submit">Find me a restaurant!</label>
+            <button type="submit" name="button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

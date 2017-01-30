@@ -14,7 +14,8 @@ body {
   color: black;
 }
 
-.form_content {
+.form_content,
+.output_content {
   text-align: center;
   margin-left: 70px;
   text-shadow: 2px 2px 4px black;

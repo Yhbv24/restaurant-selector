@@ -79,17 +79,22 @@ $(function(){
     })
 
     var user = new UserMaker(userDelivery,userCuisine,userLibations,userPrice,userName,userAddress);
+    var japanese = new RestMaker(false,"Japanese","wine-beer",4,"japanese Place", "234 ave");
+    allRestaurants.push(japanese)
 
-    console.log(user);
+    // console.log(user);
     $(".form_content").hide();
     $(".output_content").show();
 
     $(".user_name").append(user.userName);
 
+
     var displayArray = user.dataChecker();
-    for(i=0;i<5;i++){
-      $("#rest-list").append(displayArray[i])
+    console.log(displayArray);
+    for(i=0;i<1;i++){
+      $("#rest-list").append("<li id='" + displayArray[i].restName + "'>" + displayArray[i].restName + "</li>")
     }
+    $(".rest-name").append(user.userName);
 
   });
 });

@@ -1,5 +1,5 @@
 var allRestaurants = [];
-var RestMaker = function (delivery,cuisine,bar,cost,description,title,image, address){
+var RestMaker = function (delivery,cuisine,bar,cost,title,description,image, address){
   this.delivery = delivery;
   this.cost = cost;
   this.bar = bar;
@@ -79,10 +79,35 @@ $(function(){
     })
 
     var user = new UserMaker(userDelivery,userCuisine,userLibations,userPrice,userName,userAddress);
-    var japanese = new RestMaker(false,"Japanese","wine-beer",4,"japanese Place", "Japanese", "imgsrc", "234 ave");
-    var chinese = new RestMaker(true,"Chinese","wine-beer",3,"Chinese Place", "Chinese", "imgsrc", "234 ave");
-    allRestaurants.push(japanese,chinese)
+    // THAI
+    var pokPok = new RestMaker(false,"Thai","full-bar",3,"Pok Pok", "Those Wings!", "imgsrc", "234 ave");
+    var nongs = new RestMaker(false, "Thai", "beer-wine", 2, "Nongs Khao Man Gai", "Chicken and rice!","imgsrc", "123");
 
+    // JAPANESE
+    var bambooSushi = new RestMaker(false,"Japanese","full-bar",3,"Bamboo Sushi", "Good sushi!", "imgsrc", "234 ave");
+    var boxerRamen = new RestMaker(false, "Japanese", "beer-wine", 2, "Boxer Ramen", "Great ramen!","imgsrc", "123");
+
+    //CHINESE
+    var shandong = new RestMaker(true,"Chinese","full-bar", 1, "Shandong", "Chinese", "imgsrc", "234 ave");
+    var hungFarLow = new RestMaker(true,"Chinese","full-bar", 1, "Hung Far Low", "Chinese", "imgsrc", "234 ave");
+
+
+    //VIETNAMESE
+    var mekha = new RestMaker(false, "Vietnamese", "full-bar",1,"Mekha Noodle House", "Vietnamese", "imgsrc", "");
+    var lucLac = new RestMaker(false, "Vietnamese", "full-bar", 1, "Luc Lac", "Vietnamese", "imgsrc", "");
+
+    //AMERICAN
+    var nedLudd = new RestMaker(false, "American", "full-bar", 3, "Ned Ludd", "American", "imgsrc", "");
+    var swiftUnion = new RestMaker(false, "American", "full-bar", 2, "Swift and Union", "American", "imgsrc", "");
+    var russellStBbq = new RestMaker(false, "American", "wine-beer", 2, "Russell St. BBQ", "American", "imgsrc", "");
+
+    //MEXICAN
+    var azteca = new RestMaker(false, "Mexican", "full-bar", 1, "Burrito Azteca", "Mexican", "imgsrc", "");
+    var santeria = new RestMaker(false, "Mexican", "full-bar", 1, "Santeria", "Mexican", "imgsrc", "");
+    var santaCruz = new RestMaker(false, "Mexican", "full-bar", 1, "Tacqueria Santa Cruz", "Mexican", "imgsrc", "");
+    var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", 3, "Nuestra Cocina", "Mexican", "imgsrc", "");
+
+    allRestaurants.push(bambooSushi, boxerRamen, mekha, lucLac, nedLudd, swiftUnion, russellStBbq, azteca, santeria, santaCruz, nuestraCocina);
 
     // console.log(user);
     $(".form_content").hide();
@@ -92,7 +117,7 @@ $(function(){
 
     var liID = 0
     var displayArray = user.dataChecker();
-    for(i=0;i<2;i++){
+    for(i=0;i<5;i++){
       $("#rest-list").append("<li id='" + liID + "'>" + displayArray[i].restName + "</li>")
       liID ++;
     }

@@ -70,15 +70,22 @@ $(function(){
     var userName = $("input[name=name]").val();
     var userDelivery = $("input[name=delivery]:checked").val();
     var userCuisine = [];
-    var userPrice = $("select").val();
     var userLibations = $("input[name=libations]:checked").val();
     var userAddress = "123 ave"
+    var userPrice = $("select").val();
+
+    if (userPrice !== null && userName !== ""){
+      var user = new UserMaker(userDelivery,userCuisine,userLibations,userPrice,userName,userAddress);
+      $(".form_content").hide();
+      $(".output_content").show();
+    } else {
+      alert("Please enter a name and price range.");
+    }
 
     $("input[name=cuisine]:checked").each(function(){
       userCuisine.push(this.value);
     })
 
-    var user = new UserMaker(userDelivery,userCuisine,userLibations,userPrice,userName,userAddress);
     // THAI
     var pokPok = new RestMaker(false,"Thai","full-bar",3,"Pok Pok", "Those Wings!", "imgsrc", "234 ave");
     var nongs = new RestMaker(false, "Thai", "beer-wine", 2, "Nongs Khao Man Gai", "Chicken and rice!","imgsrc", "123");
@@ -110,8 +117,7 @@ $(function(){
     allRestaurants.push(bambooSushi, boxerRamen, mekha, lucLac, nedLudd, swiftUnion, russellStBbq, azteca, santeria, santaCruz, nuestraCocina);
 
     // console.log(user);
-    $(".form_content").hide();
-    $(".output_content").show();
+
 
     $(".user_name").append(user.userName);
 

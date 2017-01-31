@@ -43,12 +43,11 @@ UserMaker.prototype.dataChecker = function(){
     }
   }
 
-
   for(k = 0; k<this.cuisine.length;k++){
     for (var l = 0; l < allRestaurants.length;l++) {
       if(this.cuisine[k]===allRestaurants[l].cuisine){
         allRestaurants[l].counter+=5;
-      }
+      } 
     }
   }
 
@@ -123,7 +122,6 @@ $(function(){
     var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", "fancy", 3, "Nuestra Cocina", "Mexican", "nuestra.jpg", "2135 SE Division St, Portland, OR 97202", "(503) 232-2135");
 
     allRestaurants.push(pokPok, nongs, khunPics, langBaan, shandong, hkCafe, goodTaste, hungFarLow, franksNoodleHouse, bambooSushi, boxerRamen, marukinRamen, biwa, mekha, lucLac, phoOregon, bestBauguette, nedLudd, swiftUnion, russellStBbq, theCoop, azteca, santeria, santaCruz, nuestraCocina);
-
     $(".user_name").append(user.userName);
 
     var liID = 0

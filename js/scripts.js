@@ -92,7 +92,7 @@ $(function(){
     var pokPok = new RestMaker(false,"Thai","full-bar",3,"Pok Pok", "Those Wings!", "imgpokpok", "3226 SE Division St, Portland, OR 97202", "503-232-1387");
     var nongs = new RestMaker(false, "Thai", "beer-wine", 2, "Nongs Khao Man Gai", "Chicken and rice!","nong.jpg", "609 SE Ankeny St, Suite C", "503-740-2907");
     var khunPics = new RestMaker(false, "Thai", "beer-wine", 2, "Khun Pic's", "Seriously authentic","khun-pic.img", "3429 SE Belmont St., Portland OR 97214", "503-235-1610");
-    var nongs = new RestMaker(false, "Thai", "beer-wine", 2, "Nongs Khao Man Gai", "Chicken and rice!","imgsrc", "609 SE Ankeny St, Suite C", "503-740-2907");
+    var langBaan = new RestMaker(false, "Thai", "beer-wine", 4, "Langbaan", "Excellent option along SE 28th bustling corridor. ","langbaan", "6 SE 28th Ave Portland, OR 97214", "(971) 344-2564");
 
     // JAPANESE
     var bambooSushi = new RestMaker(false,"Japanese","full-bar",3,"Bamboo Sushi", "Good sushi!", "bamboo.jpg", "310 SE 28th Ave, Portland, OR 97214", "(503) 232-5255");
@@ -118,18 +118,18 @@ $(function(){
 
 
     //AMERICAN
-    var nedLudd = new RestMaker(false, "American", "full-bar", 3, "Ned Ludd", "American", "imgsrc", "");
-    var swiftUnion = new RestMaker(false, "American", "full-bar", 2, "Swift and Union", "American", "imgsrc", "");
-    var russellStBbq = new RestMaker(false, "American", "wine-beer", 2, "Russell St. BBQ", "American", "imgsrc", "");
-    var theCoop = new RestMaker(false, "American", "full-bar", 1, "The Coop", "Rotesserie ribs, chicken, and plenty of outdoor seating.", "imgsrc", "");
+    var nedLudd = new RestMaker(false, "American", "full-bar", 3, "Ned Ludd", "Farm to table ingredients cooked in a woodfire oven prepared with care.", "nedd-ludd.jpg", "3925 NE Martin Luther King Jr Blvd, Portland, OR 97212" , "(503) 288-6900");
+    var swiftUnion = new RestMaker(false, "American", "full-bar", 2, "Swift and Union", "American", "s-union.jpg", "8103 N Denver Ave, Portland, OR 97217", "(503) 206-4281");
+    var russellStBbq = new RestMaker(false, "American", "full-bar", 2, "Russell St. BBQ", "American", "russell.jpg", "325 NE Russell St, Portland, OR 97212", "(503) 528-8224");
+    var theCoop = new RestMaker(false, "American", "full-bar", 1, "The Coop", "Rotesserie ribs, chicken, and plenty of outdoor seating.", "coop.jpg", "6214 N Interstate Ave, Portland, OR 97217");
 
     //MEXICAN
-    var azteca = new RestMaker(false, "Mexican", "full-bar", 1, "Burrito Azteca", "Mexican", "imgsrc", "");
-    var santeria = new RestMaker(false, "Mexican", "full-bar", 1, "Santeria", "Mexican", "imgsrc", "");
-    var santaCruz = new RestMaker(false, "Mexican", "full-bar", 1, "Tacqueria Santa Cruz", "Mexican", "imgsrc", "");
-    var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", 3, "Nuestra Cocina", "Mexican", "imgsrc", "");
+    var azteca = new RestMaker(false, "Mexican", "full-bar", 1, "Burrito Azteca", "Mexican", "azteca.jpg", "1942 N Rosa Parks Way, Portland, OR 97217", "(503) 841-6667");
+    var santeria = new RestMaker(false, "Mexican", "full-bar", 1, "Santeria", "Mexican", "santeria.jpg", "703 SW Ankeny St, Portland, OR 97205", "(503) 956-7624");
+    var santaCruz = new RestMaker(false, "Mexican", "full-bar", 1, "Tacqueria Santa Cruz", "Mexican", "santa_cruz", "8630 N Lombard St, Portland, OR 97203", "(503) 289-2005");
+    var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", 3, "Nuestra Cocina", "Mexican", "nuestra.jpg", "2135 SE Division St, Portland, OR 97202", "(503) 232-2135");
 
-    allRestaurants.push(pokPok, nongs, shandong, hungFarLow, bambooSushi, boxerRamen, mekha, lucLac, nedLudd, swiftUnion, russellStBbq, azteca, santeria, santaCruz, nuestraCocina);
+    allRestaurants.push(pokPok, nongs, khunPics, langBaan, shandong, hkCafe, goodTaste, hungFarLow, franksNoodleHouse, bambooSushi, boxerRamen, marukinRamen, biwa, mekha, lucLac, phoOregon, bestBauguette, nedLudd, swiftUnion, russellStBbq, theCoop, azteca, santeria, santaCruz, nuestraCocina);
 
     // console.log(user);
 
@@ -160,14 +160,10 @@ $(function(){
         $("."+this.id).append("<li>"+ cost+"</li>");
         $("."+this.id).append("<li>Libations: "+ displayArray[this.id].bar+"</li>");
         $("."+this.id).append("<li>"+ displayArray[this.id].cuisine+" food</li>");
-<<<<<<< HEAD
-        $("."+this.id).append("<li>"+ displayArray[this.id].about+"</li>");
-        $("."+this.id).append("<li>"+ displayArray[this.id].address+"</li>");
-        $("."+this.id).append("<li>"+ displayArray[this.id].telephone+"</li>");
-=======
         $("."+this.id).append("<li>Description: "+ displayArray[this.id].about+"</li>");
         $("."+this.id).append("<li>Address: "+ displayArray[this.id].address+"</li>");
->>>>>>> 23b1cac4943fd54c0ccb8a004e0eaf60170e60df
+        $("."+this.id).append("<li>"+ displayArray[this.id].telephone+"</li>");
+
 
 
       }else {

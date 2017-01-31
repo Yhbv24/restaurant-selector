@@ -165,7 +165,6 @@ $(function(){
         $("."+this.id).append("<li>"+ displayArray[this.id].telephone+"</li>");
 
 
-
       }else {
         $(this).children().remove();
       }

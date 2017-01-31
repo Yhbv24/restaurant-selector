@@ -2,9 +2,6 @@
 LAYOUT
 ***************/
 
-html {
-  height: 100vh;
-}
 
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -14,16 +11,26 @@ body {
   background-repeat: no-repeat;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 
-/***************
-FONTS
-***************/
+.main-content {
+  width: 100vh;
+  height: 100vh;
+}
 
+#splash {
+  border: 3px solid red;
+}
 
-/***************
-IMAGES
-***************/
+#row1 {
+  margin-bottom: 50px;
+}
+
+#cuisine {
+  text-align: center;
+}
 
 ul {
   list-style: none;
@@ -52,10 +59,8 @@ li {
 .form_content,
 .output_content {
   text-align: center;
-  margin-left: 70px;
   text-shadow: 2px 2px 4px black;
   background-color: rgba(0, 0, 0, 0.5);
-
 }
 
 .output_content {
@@ -63,19 +68,17 @@ li {
   color: black;
 }
 
-#user-output {
+div #user-output {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  margin: 0 auto;
-}
+  margin: 0 auto;}
 
 .form_content h1 {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 #welcome, .form_content h1 {
   font-size: 7em;
-  margin-top: 70px;
   text-shadow: 2px 2px 4px black;
 }
 
@@ -84,7 +87,6 @@ li {
 }
 
 #main_description {
-  margin-left: 100px;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   width: 70%;
@@ -124,6 +126,8 @@ button {
 
 .btn {
   font-size: 3em;
+  margin-bottom: 1em;
+
 }
 
 @media screen and (max-width: 750px) {

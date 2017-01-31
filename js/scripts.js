@@ -160,14 +160,9 @@ $(function(){
         $("."+this.id).append("<li>"+ cost+"</li>");
         $("."+this.id).append("<li>Libations: "+ displayArray[this.id].bar+"</li>");
         $("."+this.id).append("<li>"+ displayArray[this.id].cuisine+" food</li>");
-<<<<<<< HEAD
-        $("."+this.id).append("<li>"+ displayArray[this.id].about+"</li>");
-        $("."+this.id).append("<li>"+ displayArray[this.id].address+"</li>");
         $("."+this.id).append("<li>"+ displayArray[this.id].telephone+"</li>");
-=======
         $("."+this.id).append("<li>Description: "+ displayArray[this.id].about+"</li>");
         $("."+this.id).append("<li>Address: "+ displayArray[this.id].address+"</li>");
->>>>>>> 23b1cac4943fd54c0ccb8a004e0eaf60170e60df
 
 
       }else {

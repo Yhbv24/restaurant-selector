@@ -71,7 +71,7 @@ $(function(){
     var userPrice = $("select[name=price]").val();
     var userVibe = $("input[name=vibe]:checked").val();
 
-    if (userPrice !== null && userName !== "" && userVibe !== undefined){
+    if (userPrice !== null && userName !== "" && userVibe !== null){
       allRestaurants = [];
       var user = new UserMaker(userDelivery,userCuisine,userLibations,userVibe,userPrice,userName,userAddress);
       $(".form_content").hide();
@@ -92,10 +92,10 @@ $(function(){
     var langBaan = new RestMaker(false, "Thai", "beer-wine", "fancy", 4, "Langbaan", "Excellent option along SE 28th bustling corridor. ","langbaan", "6 SE 28th Ave Portland, OR 97214", "(971) 344-2564");
 
     // JAPANESE
-    var bambooSushi = new RestMaker(false,"Japanese","full-bar",3,"Bamboo Sushi", "Good sushi!", "bamboo.jpg", "310 SE 28th Ave, Portland, OR 97214", "(503) 232-5255");
-    var boxerRamen = new RestMaker(false, "Japanese", "beer-wine", 2, "Boxer Ramen", "Great ramen!","boxer.jpg", "1025 SW Stark St, Portland, OR 97205", "(503) 894-8260");
-    var marukinRamen = new RestMaker(false, "Japanese", "beer-wine", 2, "Marukin Ramen", "Japanese chain opening up for the first time in Portland.","marukin.jpg", "609 SE Ankeny St. A, Portland, OR 97214", "(503) 894-9021");
-    var biwa = new RestMaker(false,"Japanese","full-bar",3,"Biwa", "Good sushi!", "biwa.jpg", "215 SE 9th Ave, Portland, OR 97214", "(503) 239-8830");
+    var bambooSushi = new RestMaker(false,"Japanese","full-bar", "traditional", 3,"Bamboo Sushi", "Good sushi!", "bamboo.jpg", "310 SE 28th Ave, Portland, OR 97214", "(503) 232-5255");
+    var boxerRamen = new RestMaker(false, "Japanese", "beer-wine", "hip", 2, "Boxer Ramen", "Great ramen!","boxer.jpg", "1025 SW Stark St, Portland, OR 97205", "(503) 894-8260");
+    var marukinRamen = new RestMaker(false, "Japanese", "beer-wine", "hip", 2, "Marukin Ramen", "Japanese chain opening up for the first time in Portland.","marukin.jpg", "609 SE Ankeny St. A, Portland, OR 97214", "(503) 894-9021");
+    var biwa = new RestMaker(false,"Japanese","full-bar", "fancy", 3,"Biwa", "Good sushi!", "biwa.jpg", "215 SE 9th Ave, Portland, OR 97214", "(503) 239-8830");
 
     //CHINESE
     var shandong = new RestMaker(true,"Chinese","full-bar", "traditional", 1, "Shandong", "Great Chinese food in the heart of NE Portland Hollywood district.", "shandong.jpg", "3724 NE Broadway St, Portland, OR 97232", "(503) 287-0331");

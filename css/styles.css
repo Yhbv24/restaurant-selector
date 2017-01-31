@@ -12,6 +12,11 @@ body {
 
 li {
   cursor: pointer;
+  list-style: none;
+}
+
+.restInfo {
+  font-size: .6em;
 }
 
 #welcome {

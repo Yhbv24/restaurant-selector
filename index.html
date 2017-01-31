@@ -9,27 +9,25 @@
 
     </script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Ultra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Quicksand|Ultra" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
-    <title>Restaurant Selector</title>
+    <title>RESTRANTR</title>
   </head>
   <body>
-      <div class="main_content">
+    <div class="main_content">
 
-      <!-- Splash page content -->
+    <!-- Splash page content -->
 
-          <div class="splash">
-          <h1 id="welcome">RESTRANTR</h1>
-          <h3 class="panel-heading">What is Restaurant Selector?</h3>
-          <p id="main_description">Ever wish you had a reliable friend you trusted in every city to recommend a restaurant for you?  Tired of sifting through verious websites looking for a good restaurant to check out?  We are that friend, well sort of.  Restaurant selector wants to limit the amount of time you spend researching your next trip sifting through websites and options within those websites.  Fill out your profile with preferences and see what Restaurant Selector can do for you!</p>
-          <div class="cta">
-            <label id="create" for="button">Create your profile now!</label> <br>
-            <button type="button" name="button" class="btn" id="button">Get started</button>
-          </div>
+      <div class="splash">
+        <h1 id="welcome">RESTRANTR</h1>
+        <p id="main_description">Ever wish you had a reliable friend you trusted in every city to recommend a restaurant for you?  Tired of sifting through verious websites looking for a good restaurant to check out?  We are that friend, well sort of.  RESTRANTR wants to limit the amount of time you spend sifting through websites and options within those websites researching your next dining experience.  State your preferences and see what RESTRANTR can do for you!</p>
+        <div class="cta">
+          <button type="button" name="button" class="btn" id="button">Get started</button>
         </div>
       </div>
+    </div>
 
     <!-- End splash page content, begin form content -->
 
@@ -39,22 +37,37 @@
 
       <form id="user_input_form">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div class="form-group">
               <label for="name">Name:</label>
-              <input type="text" name="name">
+              <input type="text" name="name" id="name">
             </div>
           </div>
 
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div class="form-group">
               <label for"cuisine">Type of cuisine:</label><br>
-              <input type="checkbox" name="cuisine" value="Italian"> <span>Italian</span><br>
+              <input type="checkbox" name="cuisine" value="Japanese"> <span>Japanese</span><br>
               <input type="checkbox" name="cuisine" value="Mexican"> <span>Mexican</span><br>
               <input type="checkbox" name="cuisine" value="Thai"> <span>Thai</span><br>
               <input type="checkbox" name="cuisine" value="Vietnamese"> <span>Vietnamese</span><br>
+              <input type="checkbox" name="cuisine" value="Chinese"> <span>Chinese</span><br>
               <input type="checkbox" name="cuisine" value="American"> <span>American</span><br>
 
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="vibe">Atmosphere/vibe:</label><br>
+              <select name="vibe" id="vibe">
+                <option name="vibe" selected disabled hidden><span>Choose:</span></option>
+                <option name="vibe" value="casual">Casual</option>
+                <option name="vibe" value="fancy">Fancy</option>
+                <option name="vibe" value="traditional">Traditional</option>
+                <option name="vibe" value="hip">Hip</option>
+
+              </select>
             </div>
           </div>
         </div>
@@ -63,16 +76,16 @@
           <div class="col-sm-6">
             <div class="form-group">
               <label for="delivery">Do you want delivery?</label><br>
-              <input type="radio" name="delivery" value="yes"> <span>Yes</span><br>
-              <input type="radio" name="delivery" value="no" checked> <span>No</span><br>
+              <input type="radio" name="delivery" value="true"> <span>Yes</span><br>
+              <input type="radio" name="delivery" value="false" checked> <span>No</span><br>
             </div>
           </div>
 
           <div class="col-sm-6">
             <div class="form-group">
               <label for="price">Price:</label>
-              <select name="price">
-                <option name="price" selected disabled hidden><span>-</span></option>
+              <select name="price" id="price">
+                <option name="price" selected disabled hidden><span>Choose:</span></option>
                 <option name="price" value="1"><span>$</span></option>
                 <option name="price" value="2"><span>$$</span></option>
                 <option name="price" value="3"><span>$$$</span></option>
@@ -94,10 +107,7 @@
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <div class="cta">
-              <label for="submit">Search for restaurants</label><br>
-              <button type="submit" class="btn" name="button">Submit</button>
-            </div>
+            <button type="submit" class="btn" name="button">Submit</button>
           </div>
         </div>
       </form>

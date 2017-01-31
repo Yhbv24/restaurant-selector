@@ -1,18 +1,36 @@
+/***************
+LAYOUT
+***************/
+
 html {
   height: 100vh;
 }
 
 body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #FFEEE3;
   background-image: url(../img/background_2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 'Josefin Sans', sans-serif;
-  color: #e5dfda;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/***************
+FONTS
+***************/
+
+
+/***************
+IMAGES
+***************/
+
+ul {
+  list-style: none;
 }
 
 li {
   cursor: pointer;
-  list-style: none;
 }
 
 .restInfo {
@@ -22,11 +40,13 @@ li {
 #welcome {
   font-family: 'Ultra', serif;
   color: #b77033;
-  margin-left: 100px;
+  text-align: center;
+  margin-bottom: 70px;
 }
 
-#text{
-  color: black;
+#small-logo {
+  font-family: 'Ultra', serif;
+  color: #b77033;
 }
 
 .form_content,
@@ -66,33 +86,17 @@ li {
 #main_description {
   margin-left: 100px;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 70%;
   border-radius: 10px;
   font-size: 1.5em;
+  margin: 0 auto;
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.5em;
 }
 
-.cta {
-  text-align: center;
-  margin-top: 300px;
-  font-size: 3em;
-  color: #0e0b09;
-}
-
-.cta button {
-  border-radius: 10px;
-  font-size: 1em;
-  background-color: #ecb84e;
-}
-
-#create {
-  color: #b77033;
-}
-
-.form_content {
-  display: none;
-}
-
+.form_content,
 .output_content {
   display: none;
 }
@@ -103,4 +107,32 @@ li {
 
 .form-group span {
   font-size: 1.3em;
+}
+
+#vibe,
+#price,
+#name {
+  color: black;
+}
+
+button {
+  margin-top: 200px;
+  border-radius: 10px;
+  background-color: #b77033;
+  color: #FFEEE3;
+}
+
+.btn {
+  font-size: 3em;
+}
+
+@media screen and (max-width: 750px) {
+  #welcome {
+    font-size: 3em;
+  }
+
+  #main_description {
+    font-size: 1.2em;
+    width: 90%;
+  }
 }

@@ -24,30 +24,30 @@ var UserMaker = function (delivery,cuisine,bar,vibe,cost, name, address){
 }
 
 UserMaker.prototype.dataChecker = function(){
-  var userKeys = Object.keys(this);
-  userKeys.splice(-4);
 
-  for (var i = 0; i < userKeys.length; i++) {
-    for (var j = 0; j < allRestaurants.length;j++) {
-      if (this[userKeys[i]] == allRestaurants[j][userKeys[i]]){
-        allRestaurants[j].counter+=2;
-      }
-    }
-  }
 
   for (var m = 0; m < allRestaurants.length;m++) {
-    if(this.bar === "either"){
-      allRestaurants[m].counter++
-    }else if(this.bar === allRestaurants[m].bar){
-      allRestaurants[m].counter++
+    if (this.delivery === 'true' && allRestaurants[m].delivery) {
+      allRestaurants[m].counter += 4
+    }
+    if (this.cost == allRestaurants[m].cost) {
+      allRestaurants[m].counter += 3;
+    }
+    if (this.vibe == allRestaurants[m].vibe) {
+      allRestaurants[m].counter += 1;
+    }
+
+    if(this.bar == "either"){
+      allRestaurants[m].counter++;
+    }else if(this.bar == allRestaurants[m].bar){
+      allRestaurants[m].counter++;
     }
   }
-
   for(k = 0; k<this.cuisine.length;k++){
     for (var l = 0; l < allRestaurants.length;l++) {
       if(this.cuisine[k]===allRestaurants[l].cuisine){
-        allRestaurants[l].counter+=5;
-      } 
+        allRestaurants[l].counter+=7;
+      }
     }
   }
 
@@ -89,6 +89,7 @@ $(function(){
     var nongs = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Nongs Khao Man Gai", "Chicken and rice!","nong.jpg", "609 SE Ankeny St, Suite C", "503-740-2907");
     var khunPics = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Khun Pic's", "Seriously authentic","khun-pic.img", "3429 SE Belmont St., Portland OR 97214", "503-235-1610");
     var langBaan = new RestMaker(false, "Thai", "beer-wine", "fancy", 4, "Langbaan", "Excellent option along SE 28th bustling corridor. ","langbaan", "6 SE 28th Ave Portland, OR 97214", "(971) 344-2564");
+    var beauThai = new RestMaker(true, "Thai", "beer-wine", "hip", 1, "Beau Thai", "Awesome food with delivery late at night. ","IMG HERE", "730 NW 21st ave Portland, OR 97209", "(971) 344-2564");
 
     // JAPANESE
     var bambooSushi = new RestMaker(false,"Japanese","full-bar", "traditional", 3,"Bamboo Sushi", "Good sushi!", "bamboo.jpg", "310 SE 28th Ave, Portland, OR 97214", "(503) 232-5255");
@@ -114,6 +115,7 @@ $(function(){
     var swiftUnion = new RestMaker(false, "American", "full-bar", "hip", 2, "Swift and Union", "American", "s-union.jpg", "8103 N Denver Ave, Portland, OR 97217", "(503) 206-4281");
     var russellStBbq = new RestMaker(false, "American", "full-bar", "traditional" , 2, "Russell St. BBQ", "American", "russell.jpg", "325 NE Russell St, Portland, OR 97212", "(503) 528-8224");
     var theCoop = new RestMaker(false, "American", "full-bar", "hip", 1, "The Coop", "Rotesserie ribs, chicken, and plenty of outdoor seating.", "coop.jpg", "6214 N Interstate Ave, Portland, OR 97217");
+    var charleysPhilly = new RestMaker(true, "American", "beer-wine", "hip", 2, "Charley's Philly Steaks", "Good Philly Cheese Steaks.", "IMG HERE", "1200 SE 82nd ave Happy Valley, OR 97086");
 
     //MEXICAN
     var azteca = new RestMaker(false, "Mexican", "full-bar", "traditional", 1, "Burrito Azteca", "Mexican", "azteca.jpg", "1942 N Rosa Parks Way, Portland, OR 97217", "(503) 841-6667");
@@ -121,7 +123,7 @@ $(function(){
     var santaCruz = new RestMaker(false, "Mexican", "full-bar", "traditional" , 1, "Tacqueria Santa Cruz", "Mexican", "santa_cruz", "8630 N Lombard St, Portland, OR 97203", "(503) 289-2005");
     var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", "fancy", 3, "Nuestra Cocina", "Mexican", "nuestra.jpg", "2135 SE Division St, Portland, OR 97202", "(503) 232-2135");
 
-    allRestaurants.push(pokPok, nongs, khunPics, langBaan, shandong, hkCafe, goodTaste, hungFarLow, franksNoodleHouse, bambooSushi, boxerRamen, marukinRamen, biwa, mekha, lucLac, phoOregon, bestBauguette, nedLudd, swiftUnion, russellStBbq, theCoop, azteca, santeria, santaCruz, nuestraCocina);
+    allRestaurants.push(pokPok, nongs, khunPics, langBaan, shandong, hkCafe, goodTaste, hungFarLow, franksNoodleHouse, bambooSushi, boxerRamen, marukinRamen, biwa, mekha, lucLac, phoOregon, bestBauguette, nedLudd, swiftUnion, russellStBbq, theCoop, azteca, santeria, santaCruz, nuestraCocina, beauThai, charleysPhilly);
     $(".user_name").append(user.userName);
 
     var liID = 0

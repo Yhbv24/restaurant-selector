@@ -48,7 +48,6 @@ UserMaker.prototype.dataChecker = function(){
       }
     }
   }
-
   return allRestaurants.sort(function(a,b){return a.counter - b.counter}).reverse();
 
 }
@@ -76,10 +75,12 @@ $(function(){
     var userPrice = $("select").val();
 
     if (userPrice !== null && userName !== ""){
+      allRestaurants = [];
       var user = new UserMaker(userDelivery,userCuisine,userLibations,userPrice,userName,userAddress);
       $(".form_content").hide();
       $(".output_content").show();
     } else {
+      allRestaurants=[];
       alert("Please enter a name and price range.");
     }
 
@@ -128,7 +129,7 @@ $(function(){
     var santaCruz = new RestMaker(false, "Mexican", "full-bar", 1, "Tacqueria Santa Cruz", "Mexican", "imgsrc", "");
     var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", 3, "Nuestra Cocina", "Mexican", "imgsrc", "");
 
-    allRestaurants.push(bambooSushi, boxerRamen, mekha, lucLac, nedLudd, swiftUnion, russellStBbq, azteca, santeria, santaCruz, nuestraCocina);
+    allRestaurants.push(pokPok, nongs, shandong, hungFarLow, bambooSushi, boxerRamen, mekha, lucLac, nedLudd, swiftUnion, russellStBbq, azteca, santeria, santaCruz, nuestraCocina);
 
     // console.log(user);
 
@@ -145,14 +146,28 @@ $(function(){
 
     $('li').click(function() {
       if ($(this).children().length === 0){
-        $("#"+this.id).append("<ul class='"+this.id+"'></ul>");
-        $("."+this.id).append("<li>"+ displayArray[this.id].delivery+"</li>");
-        $("."+this.id).append("<li>"+ displayArray[this.id].cost+"</li>");
-        $("."+this.id).append("<li>"+ displayArray[this.id].bar+"</li>");
+        $("#"+this.id).append("<ul class='restInfo "+this.id+"'></ul>");
+
+        if(displayArray[this.id].delivery){
+          $("."+this.id).append("<li>Delivery: Yes</li>");
+        } else {
+          $("."+this.id).append("<li>Delivery: No</li>");
+        }
+        var cost="$";
+        for(z=1;z<displayArray[this.id].cost;z++){
+          cost+="$"
+        }
+        $("."+this.id).append("<li>"+ cost+"</li>");
+        $("."+this.id).append("<li>Libations: "+ displayArray[this.id].bar+"</li>");
         $("."+this.id).append("<li>"+ displayArray[this.id].cuisine+" food</li>");
+<<<<<<< HEAD
         $("."+this.id).append("<li>"+ displayArray[this.id].about+"</li>");
         $("."+this.id).append("<li>"+ displayArray[this.id].address+"</li>");
         $("."+this.id).append("<li>"+ displayArray[this.id].telephone+"</li>");
+=======
+        $("."+this.id).append("<li>Description: "+ displayArray[this.id].about+"</li>");
+        $("."+this.id).append("<li>Address: "+ displayArray[this.id].address+"</li>");
+>>>>>>> 23b1cac4943fd54c0ccb8a004e0eaf60170e60df
 
 
       }else {

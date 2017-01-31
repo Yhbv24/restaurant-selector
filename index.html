@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
-    <title>Restaurant Selector</title>
+    <title>RESTRANTR</title>
   </head>
   <body>
       <div class="main_content">
@@ -22,7 +22,7 @@
 
           <div class="splash">
           <h1 id="welcome">RESTRANTR</h1>
-          <h3 class="panel-heading">What is Restaurant Selector?</h3>
+          <h3 class="panel-heading">What is <span id="small-logo">RESTRANTR </span>?</h3>
           <p id="main_description">Ever wish you had a reliable friend you trusted in every city to recommend a restaurant for you?  Tired of sifting through verious websites looking for a good restaurant to check out?  We are that friend, well sort of.  Restaurant selector wants to limit the amount of time you spend researching your next trip sifting through websites and options within those websites.  Fill out your profile with preferences and see what Restaurant Selector can do for you!</p>
           <div class="cta">
             <label id="create" for="button">Create your profile now!</label> <br>
@@ -39,22 +39,37 @@
 
       <form id="user_input_form">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div class="form-group">
               <label for="name">Name:</label>
               <input type="text" name="name">
             </div>
           </div>
 
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div class="form-group">
               <label for"cuisine">Type of cuisine:</label><br>
-              <input type="checkbox" name="cuisine" value="Italian"> <span>Italian</span><br>
-              <input type="checkbox" name="cuisine" value="Mexican"> <span>Mexican</span><br>
-              <input type="checkbox" name="cuisine" value="Thai"> <span>Thai</span><br>
-              <input type="checkbox" name="cuisine" value="Vietnamese"> <span>Vietnamese</span><br>
-              <input type="checkbox" name="cuisine" value="American"> <span>American</span><br>
+              <input type="checkbox" name="cuisine" value="japanese"> <span>Japanese</span><br>
+              <input type="checkbox" name="cuisine" value="mexican"> <span>Mexican</span><br>
+              <input type="checkbox" name="cuisine" value="thai"> <span>Thai</span><br>
+              <input type="checkbox" name="cuisine" value="vietnamese"> <span>Vietnamese</span><br>
+              <input type="checkbox" name="cuisine" value="chinese"> <span>Chinese</span><br>
+              <input type="checkbox" name="cuisine" value="american"> <span>American</span><br>
 
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="vibe">Atmosphere/vibe:</label><br>
+              <select name="vibe">
+                <option name="vibe" selected disabled hidden><span>-</span></option>
+                <option name="vibe" value="casual"> Casual</option>
+                <option name="vibe" value="fancy"> Fancy</option>
+                <option name="vibe" value="traditional"> Traditional</option>
+                <option name="vibe" value="hip"> Hip</option>
+
+              </select>
             </div>
           </div>
         </div>
@@ -63,8 +78,8 @@
           <div class="col-sm-6">
             <div class="form-group">
               <label for="delivery">Do you want delivery?</label><br>
-              <input type="radio" name="delivery" value="yes"> <span>Yes</span><br>
-              <input type="radio" name="delivery" value="no" checked> <span>No</span><br>
+              <input type="radio" name="delivery" value="true"> <span>Yes</span><br>
+              <input type="radio" name="delivery" value="false" checked> <span>No</span><br>
             </div>
           </div>
 

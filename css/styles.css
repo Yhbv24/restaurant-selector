@@ -10,6 +10,10 @@ body {
   color: #e5dfda;
 }
 
+ul {
+  list-style: none;
+}
+
 li {
   cursor: pointer;
   list-style: none;
@@ -27,6 +31,11 @@ li {
 
 #text{
   color: black;
+}
+
+#small-logo {
+  font-family: 'Ultra', serif;
+  color: #b77033;
 }
 
 .form_content,

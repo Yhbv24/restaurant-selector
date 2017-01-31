@@ -44,7 +44,7 @@ UserMaker.prototype.dataChecker = function(){
   for(k = 0; k<this.cuisine.length;k++){
     for (var l = 0; l < allRestaurants.length;l++) {
       if(this.cuisine[k]===allRestaurants[l].cuisine){
-        allRestaurants[l].counter++;
+        allRestaurants[l].counter+=5;
       }
     }
   }
@@ -98,7 +98,7 @@ $(function(){
     var bambooSushi = new RestMaker(false,"Japanese","full-bar",3,"Bamboo Sushi", "Good sushi!", "bamboo.jpg", "310 SE 28th Ave, Portland, OR 97214", "(503) 232-5255");
     var boxerRamen = new RestMaker(false, "Japanese", "beer-wine", 2, "Boxer Ramen", "Great ramen!","boxer.jpg", "1025 SW Stark St, Portland, OR 97205", "(503) 894-8260");
     var marukinRamen = new RestMaker(false, "Japanese", "beer-wine", 2, "Marukin Ramen", "Japanese chain opening up for the first time in Portland.","marukin.jpg", "609 SE Ankeny St. A, Portland, OR 97214", "(503) 894-9021");
-    var biwa = new RestMaker(false,"Japanese","full-bar",3,"Bamboo Sushi", "Good sushi!", "biwa.jpg", "215 SE 9th Ave, Portland, OR 97214", "(503) 239-8830");
+    var biwa = new RestMaker(false,"Japanese","full-bar",3,"Biwa", "Good sushi!", "biwa.jpg", "215 SE 9th Ave, Portland, OR 97214", "(503) 239-8830");
 
 
     //CHINESE

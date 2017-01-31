@@ -9,7 +9,7 @@
 
     </script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Ultra" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
@@ -21,11 +21,11 @@
       <!-- Splash page content -->
 
           <div class="splash">
-          <h1 id="welcome">Welcome to Restaurant Selector!</h1>
+          <h1 id="welcome">RESTRANTR</h1>
           <h3 class="panel-heading">What is Restaurant Selector?</h3>
           <p id="main_description">Ever wish you had a reliable friend you trusted in every city to recommend a restaurant for you?  Tired of sifting through verious websites looking for a good restaurant to check out?  We are that friend, well sort of.  Restaurant selector wants to limit the amount of time you spend researching your next trip sifting through websites and options within those websites.  Fill out your profile with preferences and see what Restaurant Selector can do for you!</p>
           <div class="cta">
-            <label for="button">Create your profile now!</label> <br>
+            <label id="create" for="button">Create your profile now!</label> <br>
             <button type="button" name="button" class="btn" id="button">Get started</button>
           </div>
         </div>
@@ -52,6 +52,9 @@
               <input type="checkbox" name="cuisine" value="italian"> <span>Italian</span><br>
               <input type="checkbox" name="cuisine" value="mexican"> <span>Mexican</span><br>
               <input type="checkbox" name="cuisine" value="thai"> <span>Thai</span><br>
+              <input type="checkbox" name="cuisine" value="vietnamese"> <span>Vietnamese</span><br>
+              <input type="checkbox" name="cuisine" value="american"> <span>American</span><br>
+
             </div>
           </div>
         </div>
@@ -61,7 +64,7 @@
             <div class="form-group">
               <label for="delivery">Do you want delivery?</label><br>
               <input type="radio" name="delivery" value="yes"> <span>Yes</span><br>
-              <input type="radio" name="delivery" value="no"> <span>No</span><br>
+              <input type="radio" name="delivery" value="no" checked> <span>No</span><br>
             </div>
           </div>
 
@@ -82,7 +85,7 @@
           <div class="col-sm-6">
             <div class="form-group">
               <label for="bar">Libations:</label> <br>
-              <input type="radio" name="libations" value="full-bar"> <span>Full Bar</span> <br>
+              <input type="radio" name="libations" value="full-bar" checked> <span>Full Bar</span> <br>
               <input type="radio" name="libations" value="wine-beer"> <span>Wine and Beer</span> <br>
               <input type="radio" name="libations" value="either"> <span>I really don't care.</span> <br>
             </div>
@@ -102,7 +105,7 @@
       <!-- End form content, begin output content -->
 
     <div class="output_content">
-      <div class="col-sm-6">
+      <div class="col-sm-6" id="user-output">
         <h3><span class="user_name"></span>, based on your preferences, we recommenend:</h3>
         <ul id="rest-list">
           <!-- Output with matches will go here -->

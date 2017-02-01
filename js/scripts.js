@@ -137,8 +137,13 @@ $(function(){
     $(".rest-name").append(user.userName);
 
     $('li').click(function() {
+      console.log("children length everytime: " +$(this).children().children().length);
+
       if ($(this).children().length === 0){
-        $(this).siblings().children().empty();
+        console.log("if passed");
+        console.log($(this).children().length);
+        $(this).siblings().children().remove();
+        $(this).children().empty();
         $("#img-here").empty();
         $("#img-here").append("<img class='show-image'src='img/"+displayArray[this.id].image+"'></img>");
         $("#"+this.id).append("<ul class='restInfo "+this.id+"'></ul>");
@@ -161,6 +166,10 @@ $(function(){
 
 
       }else {
+        console.log("no pass");
+        console.log($(this).children());
+        console.log("length: " + $(this).children().length);
+
         $(this).children().remove();
         $("#img-here").empty();
       }

@@ -46,11 +46,7 @@ UserMaker.prototype.dataChecker = function(){
   for(k = 0; k<this.cuisine.length;k++){
     for (var l = 0; l < allRestaurants.length;l++) {
       if(this.cuisine[k]===allRestaurants[l].cuisine){
-<<<<<<< HEAD
         allRestaurants[l].counter+=7;
-=======
-        allRestaurants[l].counter+=5;
->>>>>>> front-end
       }
     }
   }
@@ -91,14 +87,11 @@ $(function(){
     // THAI
     var pokPok = new RestMaker(false,"Thai","full-bar", "hip", 3,"Pok Pok", "Those Wings!", "pok_pok.jpg", "3226 SE Division St, Portland, OR 97202", "503-232-1387");
     var nongs = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Nongs Khao Man Gai", "Chicken and rice!","nong.jpg", "609 SE Ankeny St, Suite C", "503-740-2907");
-<<<<<<< HEAD
-    var khunPics = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Khun Pic's", "Seriously authentic","khun-pic.img", "3429 SE Belmont St., Portland OR 97214", "503-235-1610");
-    var langBaan = new RestMaker(false, "Thai", "beer-wine", "fancy", 4, "Langbaan", "Excellent option along SE 28th bustling corridor. ","langbaan", "6 SE 28th Ave Portland, OR 97214", "(971) 344-2564");
     var beauThai = new RestMaker(true, "Thai", "beer-wine", "hip", 1, "Beau Thai", "Awesome food with delivery late at night. ","IMG HERE", "730 NW 21st ave Portland, OR 97209", "(971) 344-2564");
-=======
+
     var khunPics = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Khun Pic's", "Seriously authentic","khun-pic.jpg", "3429 SE Belmont St., Portland OR 97214", "503-235-1610");
     var langBaan = new RestMaker(false, "Thai", "beer-wine", "fancy", 4, "Langbaan", "Excellent option along SE 28th bustling corridor. ","langbaan.jpg", "6 SE 28th Ave Portland, OR 97214", "(971) 344-2564");
->>>>>>> front-end
+
 
     // JAPANESE
     var bambooSushi = new RestMaker(false,"Japanese","full-bar", "traditional", 3,"Bamboo Sushi", "Good sushi!", "bamboo.jpg", "310 SE 28th Ave, Portland, OR 97214", "(503) 232-5255");
@@ -145,12 +138,9 @@ $(function(){
 
     $('li').click(function() {
       if ($(this).children().length === 0){
-<<<<<<< HEAD
         $(this).siblings().children().empty();
-=======
         $("#img-here").empty();
         $("#img-here").append("<img class='show-image'src='img/"+displayArray[this.id].image+"'></img>");
->>>>>>> front-end
         $("#"+this.id).append("<ul class='restInfo "+this.id+"'></ul>");
 
         if(displayArray[this.id].delivery){

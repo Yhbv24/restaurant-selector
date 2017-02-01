@@ -132,7 +132,8 @@ button {
 }
 
 .show-image {
-  max-width: 500px;
+  max-width: 600px;
+  margin-top: 3em;
 }
 
 @media screen and (max-width: 750px) {

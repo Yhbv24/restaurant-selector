@@ -11,7 +11,7 @@ var RestMaker = function (delivery,cuisine,bar,vibe,cost,title,description,image
   this.address = address;
   this.telephone = telephone;
   this.counter = 0;
-}
+};
 
 var UserMaker = function (delivery,cuisine,bar,vibe,cost, name, address){
   this.delivery = delivery;
@@ -21,14 +21,14 @@ var UserMaker = function (delivery,cuisine,bar,vibe,cost, name, address){
   this.cuisine = cuisine;
   this.userName = name;
   this.address = address;
-}
+};
 
 UserMaker.prototype.dataChecker = function(){
 
 
   for (var m = 0; m < allRestaurants.length;m++) {
     if (this.delivery === 'true' && allRestaurants[m].delivery) {
-      allRestaurants[m].counter += 4
+      allRestaurants[m].counter += 4;
     }
     if (this.cost == allRestaurants[m].cost) {
       allRestaurants[m].counter += 3;
@@ -51,28 +51,29 @@ UserMaker.prototype.dataChecker = function(){
     }
   }
 
-  return allRestaurants.sort(function(a,b){return a.counter - b.counter}).reverse();
+  return allRestaurants.sort(function(a,b){return a.counter - b.counter;}).reverse();
 
-}
+};
 
 $(function(){
   $("#button").click(function(){
     $(".splash").hide();
     $(".form_content").show();
-  })
+  });
   $("form#user_input_form").submit(function(event){
     event.preventDefault();
     var userName = $("input[name=name]").val();
     var userDelivery = $("input[name=delivery]:checked").val();
     var userCuisine = [];
     var userLibations = $("input[name=libations]:checked").val();
-    var userAddress = "123 ave"
+    var userAddress = "123 ave";
     var userPrice = $("select[name=price]").val();
     var userVibe = $("input[name=vibe]:checked").val();
+    var user;
 
     if (userPrice !== null && userName !== "" && userVibe !== null){
       allRestaurants = [];
-      var user = new UserMaker(userDelivery,userCuisine,userLibations,userVibe,userPrice,userName,userAddress);
+      user = new UserMaker(userDelivery,userCuisine,userLibations,userVibe,userPrice,userName,userAddress);
       $(".form_content").hide();
       $(".output_content").show();
     } else {
@@ -82,13 +83,12 @@ $(function(){
 
     $("input[name=cuisine]:checked").each(function(){
       userCuisine.push(this.value);
-    })
+    });
 
     // THAI
     var pokPok = new RestMaker(false,"Thai","full-bar", "hip", 3,"Pok Pok", "Those Wings!", "pok_pok.jpg", "3226 SE Division St, Portland, OR 97202", "503-232-1387");
     var nongs = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Nongs Khao Man Gai", "Chicken and rice!","nong.jpg", "609 SE Ankeny St, Suite C", "503-740-2907");
     var beauThai = new RestMaker(true, "Thai", "beer-wine", "hip", 1, "Beau Thai", "Awesome food with delivery late at night. ","beau-thai.jpg", "730 NW 21st ave Portland, OR 97209", "(971) 344-2564");
-
     var khunPics = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Khun Pic's", "Seriously authentic","khun-pic.jpg", "3429 SE Belmont St., Portland OR 97214", "503-235-1610");
     var langBaan = new RestMaker(false, "Thai", "beer-wine", "fancy", 4, "Langbaan", "Excellent option along SE 28th bustling corridor. ","langbaan.jpg", "6 SE 28th Ave Portland, OR 97214", "(971) 344-2564");
 
@@ -116,8 +116,8 @@ $(function(){
     var nedLudd = new RestMaker(false, "American", "full-bar", "hip", 3, "Ned Ludd", "Farm to table ingredients cooked in a woodfire oven prepared with care.", "ned-ludd.jpg", "3925 NE Martin Luther King Jr Blvd, Portland, OR 97212" , "(503) 288-6900");
     var swiftUnion = new RestMaker(false, "American", "full-bar", "hip", 2, "Swift and Union", "American", "s-union.jpg", "8103 N Denver Ave, Portland, OR 97217", "(503) 206-4281");
     var russellStBbq = new RestMaker(false, "American", "full-bar", "traditional" , 2, "Russell St. BBQ", "American", "russell.jpg", "325 NE Russell St, Portland, OR 97212", "(503) 528-8224");
-    var theCoop = new RestMaker(false, "American", "full-bar", "hip", 1, "The Coop", "Rotesserie ribs, chicken, and plenty of outdoor seating.", "coop.jpg", "6214 N Interstate Ave, Portland, OR 97217");
-    var charleysPhilly = new RestMaker(true, "American", "none", "traditional", 1, "Charley's Philly Steaks", "Good Philly Cheese Steaks.", "philly.jpg", "1200 SE 82nd ave Happy Valley, OR 97086");
+    var theCoop = new RestMaker(false, "American", "full-bar", "hip", 1, "The Coop", "Rotesserie ribs, chicken, and plenty of outdoor seating.", "coop.jpg", "6214 N Interstate Ave, Portland, OR 97217", "(503) 208-3046");
+    var charleysPhilly = new RestMaker(true, "American", "none", "traditional", 1, "Charley's Philly Steaks", "Good Philly Cheese Steaks.", "philly.jpg", "1200 SE 82nd ave Happy Valley, OR 97086", "(503) 653-1102");
 
     //MEXICAN
     var azteca = new RestMaker(false, "Mexican", "full-bar", "traditional", 1, "Burrito Azteca", "Delicious burritos and margaritas.", "azteca.jpg", "1942 N Rosa Parks Way, Portland, OR 97217", "(503) 841-6667");
@@ -128,10 +128,10 @@ $(function(){
     allRestaurants.push(pokPok, nongs, khunPics, langBaan, shandong, hkCafe, goodTaste, hungFarLow, franksNoodleHouse, bambooSushi, boxerRamen, marukinRamen, biwa, mekha, lucLac, phoOregon, bestBauguette, nedLudd, swiftUnion, russellStBbq, theCoop, azteca, santeria, santaCruz, nuestraCocina, beauThai, charleysPhilly);
     $(".user_name").append(user.userName);
 
-    var liID = 0
+    var liID = 0;
     var displayArray = user.dataChecker();
     for(i=0;i<5;i++){
-      $("#rest-list").append("<li id='" + liID + "'>" + displayArray[i].restName + "</li>")
+      $("#rest-list").append("<li id='" + liID + "'>" + displayArray[i].restName + "</li>");
       liID ++;
     }
     $(".rest-name").append(user.userName);
@@ -155,7 +155,7 @@ $(function(){
         }
         var cost="$";
         for(z=1;z<displayArray[this.id].cost;z++){
-          cost+="$"
+          cost+="$";
         }
         $("."+this.id).append("<li>"+ cost+"</li>");
         $("."+this.id).append("<li>Libations: "+ displayArray[this.id].bar+"</li>");

@@ -162,6 +162,7 @@ $(function(){
 
       }else {
         $(this).children().remove();
+        $("#img-here").empty();
       }
 
     });

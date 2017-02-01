@@ -36,7 +36,7 @@
       <h1>Enter Your Information:</h1>
 
       <form id="user_input_form">
-        <div class="row">
+        <div class="row" id="row1">
           <div class="col-sm-4">
             <div class="form-group">
               <label for="name">Name:</label>
@@ -45,43 +45,21 @@
           </div>
 
           <div class="col-sm-4">
-            <div class="form-group">
-              <label for"cuisine">Type of cuisine:</label><br>
-              <input type="checkbox" name="cuisine" value="Japanese"> <span>Japanese</span><br>
-              <input type="checkbox" name="cuisine" value="Mexican"> <span>Mexican</span><br>
-              <input type="checkbox" name="cuisine" value="Thai"> <span>Thai</span><br>
-              <input type="checkbox" name="cuisine" value="Vietnamese"> <span>Vietnamese</span><br>
-              <input type="checkbox" name="cuisine" value="Chinese"> <span>Chinese</span><br>
-              <input type="checkbox" name="cuisine" value="American"> <span>American</span><br>
+            <div id="cuisine">
+              <div class="form-group" id="cuisine-left">
+                <label for"cuisine">Type of cuisine:</label><br>
+                <input type="checkbox" name="cuisine" value="Japanese"> <span>Japanese</span><br>
+                <input type="checkbox" name="cuisine" value="Mexican"> <span>Mexican</span><br>
+                <input type="checkbox" name="cuisine" value="Thai"> <span>Thai</span><br>
+                <input type="checkbox" name="cuisine" value="Vietnamese"> <span>Vietnamese</span><br>
+                <input type="checkbox" name="cuisine" value="Chinese"> <span>Chinese</span><br>
+                <input type="checkbox" name="cuisine" value="American"> <span>American</span><br>
+              </div>
 
             </div>
           </div>
 
           <div class="col-sm-4">
-            <div class="form-group">
-              <label for="vibe">Atmosphere/vibe:</label><br>
-              <select name="vibe" id="vibe">
-                <option name="vibe" selected disabled hidden><span>Choose:</span></option>
-                <option name="vibe" value="casual">Casual</option>
-                <option name="vibe" value="fancy">Fancy</option>
-                <option name="vibe" value="traditional">Traditional</option>
-                <option name="vibe" value="hip">Hip</option>
-
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="delivery">Do you want delivery?</label><br>
-              <input type="radio" name="delivery" value="true"> <span>Yes</span><br>
-              <input type="radio" name="delivery" value="false" checked> <span>No</span><br>
-            </div>
-          </div>
-
-          <div class="col-sm-6">
             <div class="form-group">
               <label for="price">Price:</label>
               <select name="price" id="price">
@@ -95,21 +73,47 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-sm-6">
+        <div class="row" id="row2">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="delivery">Do you want delivery?</label><br>
+              <input type="radio" name="delivery" value="true"> <span>Yes</span><br>
+              <input type="radio" name="delivery" value="false" checked> <span>No</span><br>
+            </div>
+          </div>
+
+
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="vibe">Atmosphere/vibe:</label><br>
+              <select name="vibe" id="vibe">
+                <option name="vibe" selected disabled hidden><span>Choose:</span></option>
+                <option name="vibe" value="casual">Casual</option>
+                <option name="vibe" value="fancy">Fancy</option>
+                <option name="vibe" value="traditional">Traditional</option>
+                <option name="vibe" value="hip">Hip</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
             <div class="form-group">
               <label for="bar">Libations:</label> <br>
               <input type="radio" name="libations" value="full-bar" checked> <span>Full Bar</span> <br>
               <input type="radio" name="libations" value="wine-beer"> <span>Wine and Beer</span> <br>
               <input type="radio" name="libations" value="either"> <span>I really don't care.</span> <br>
             </div>
+
           </div>
         </div>
-        <div class="row">
+        <button type="submit" class="btn" name="button">Submit</button>
+
+
+        <!-- <div class="row" id="row3">
           <div class="col-sm-12">
-            <button type="submit" class="btn" name="button">Submit</button>
+
           </div>
-        </div>
+        </div> -->
       </form>
     </div>
 
@@ -122,13 +126,9 @@
           <!-- Output with matches will go here -->
         </ul>
       </div>
-      <!-- <div class="col-sm-6">
-        <h3><span class="rest-name"></span></h3>
-        <p>Type of cuisine: <span class="cuisine_type"></span></p>
-        <p>Delivery: <span class="delivery"></span></p>
-        <p>Price: <span class="price"></span></p>
-        <p>Alcohol: <span class="alcohol"></span></p>
-      </div> -->
+      <div class="col-sm-6" id="img-here">
+
+      </div>
     </div>
   </body>
 </html>

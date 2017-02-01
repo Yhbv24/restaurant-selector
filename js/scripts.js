@@ -136,6 +136,7 @@ $(function(){
 
     $('li').click(function() {
       if ($(this).children().length === 0){
+        $(this).siblings().children().empty();
         $("#"+this.id).append("<ul class='restInfo "+this.id+"'></ul>");
 
         if(displayArray[this.id].delivery){

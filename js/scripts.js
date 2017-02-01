@@ -85,11 +85,13 @@ $(function(){
     })
 
     // THAI
-    var pokPok = new RestMaker(false,"Thai","full-bar", "hip", 3,"Pok Pok", "Those Wings!", "imgpokpok", "3226 SE Division St, Portland, OR 97202", "503-232-1387");
+    var pokPok = new RestMaker(false,"Thai","full-bar", "hip", 3,"Pok Pok", "Those Wings!", "pok_pok.jpg", "3226 SE Division St, Portland, OR 97202", "503-232-1387");
     var nongs = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Nongs Khao Man Gai", "Chicken and rice!","nong.jpg", "609 SE Ankeny St, Suite C", "503-740-2907");
-    var khunPics = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Khun Pic's", "Seriously authentic","khun-pic.img", "3429 SE Belmont St., Portland OR 97214", "503-235-1610");
-    var langBaan = new RestMaker(false, "Thai", "beer-wine", "fancy", 4, "Langbaan", "Excellent option along SE 28th bustling corridor. ","langbaan", "6 SE 28th Ave Portland, OR 97214", "(971) 344-2564");
-    var beauThai = new RestMaker(true, "Thai", "beer-wine", "hip", 1, "Beau Thai", "Awesome food with delivery late at night. ","IMG HERE", "730 NW 21st ave Portland, OR 97209", "(971) 344-2564");
+    var beauThai = new RestMaker(true, "Thai", "beer-wine", "hip", 1, "Beau Thai", "Awesome food with delivery late at night. ","beau-thai.jpg", "730 NW 21st ave Portland, OR 97209", "(971) 344-2564");
+
+    var khunPics = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Khun Pic's", "Seriously authentic","khun-pic.jpg", "3429 SE Belmont St., Portland OR 97214", "503-235-1610");
+    var langBaan = new RestMaker(false, "Thai", "beer-wine", "fancy", 4, "Langbaan", "Excellent option along SE 28th bustling corridor. ","langbaan.jpg", "6 SE 28th Ave Portland, OR 97214", "(971) 344-2564");
+
 
     // JAPANESE
     var bambooSushi = new RestMaker(false,"Japanese","full-bar", "traditional", 3,"Bamboo Sushi", "Good sushi!", "bamboo.jpg", "310 SE 28th Ave, Portland, OR 97214", "(503) 232-5255");
@@ -105,23 +107,23 @@ $(function(){
     var franksNoodleHouse = new RestMaker(true,"Chinese","beer-wine", "traditional", 1, "Good Taste", "Handmade noodles and an offering of great Korean classics as well.", "franks.jpg", "822 NE Broadway St, Portland, OR 97232", "(503) 288-1007");
 
     //VIETNAMESE
-    var mekha = new RestMaker(false, "Vietnamese", "full-bar", "traditional", 1,"Mekha Noodle House", "Great place for pho and Cambodian cuisine", "mekha.jpg", "6846 NE Sandy Blvd Portland, OR 97213", "(503) 719-4584");
+    var mekha = new RestMaker(false, "Vietnamese", "full-bar", "traditional", 1,"Mekha Noodle House", "Great place for pho and Cambodian cuisine", "mehka.jpg", "6846 NE Sandy Blvd Portland, OR 97213", "(503) 719-4584");
     var lucLac = new RestMaker(false, "Vietnamese", "full-bar", "hip", 2, "Luc Lac", "Hip pot in SW downtown Portland offering a great happy hour and excellent pho.", "luclac.jpg", "835 SW 2nd Ave, Portland, OR 97204" , "(503) 222-0047");
     var phoOregon = new RestMaker(false, "Vietnamese", "beer-wine", "traditional", 1,"Pho Oregon", "Great place for pho and Cambodian cuisine", "pho-oregon.jpg", "2518 NE 82nd Ave, Portland, OR 97220", "(503) 262-8816");
     var bestBauguette = new RestMaker(false, "Vietnamese", "none", "traditional", 1,"Best Baguette", "Offering not only some of the cheapest, but arguably the best bahn-mi in Portland.", "b-baguette.jpg", "8308 SE Powell Blvd, Portland, OR 97266", "(503) 788-3098");
 
     //AMERICAN
-    var nedLudd = new RestMaker(false, "American", "full-bar", "hip", 3, "Ned Ludd", "Farm to table ingredients cooked in a woodfire oven prepared with care.", "nedd-ludd.jpg", "3925 NE Martin Luther King Jr Blvd, Portland, OR 97212" , "(503) 288-6900");
+    var nedLudd = new RestMaker(false, "American", "full-bar", "hip", 3, "Ned Ludd", "Farm to table ingredients cooked in a woodfire oven prepared with care.", "ned-ludd.jpg", "3925 NE Martin Luther King Jr Blvd, Portland, OR 97212" , "(503) 288-6900");
     var swiftUnion = new RestMaker(false, "American", "full-bar", "hip", 2, "Swift and Union", "American", "s-union.jpg", "8103 N Denver Ave, Portland, OR 97217", "(503) 206-4281");
     var russellStBbq = new RestMaker(false, "American", "full-bar", "traditional" , 2, "Russell St. BBQ", "American", "russell.jpg", "325 NE Russell St, Portland, OR 97212", "(503) 528-8224");
     var theCoop = new RestMaker(false, "American", "full-bar", "hip", 1, "The Coop", "Rotesserie ribs, chicken, and plenty of outdoor seating.", "coop.jpg", "6214 N Interstate Ave, Portland, OR 97217");
-    var charleysPhilly = new RestMaker(true, "American", "beer-wine", "hip", 2, "Charley's Philly Steaks", "Good Philly Cheese Steaks.", "IMG HERE", "1200 SE 82nd ave Happy Valley, OR 97086");
+    var charleysPhilly = new RestMaker(true, "American", "none", "traditional", 1, "Charley's Philly Steaks", "Good Philly Cheese Steaks.", "philly.jpg", "1200 SE 82nd ave Happy Valley, OR 97086");
 
     //MEXICAN
-    var azteca = new RestMaker(false, "Mexican", "full-bar", "traditional", 1, "Burrito Azteca", "Mexican", "azteca.jpg", "1942 N Rosa Parks Way, Portland, OR 97217", "(503) 841-6667");
-    var santeria = new RestMaker(false, "Mexican", "full-bar", "hip", 1, "Santeria", "Mexican", "santeria.jpg", "703 SW Ankeny St, Portland, OR 97205", "(503) 956-7624");
-    var santaCruz = new RestMaker(false, "Mexican", "full-bar", "traditional" , 1, "Tacqueria Santa Cruz", "Mexican", "santa_cruz", "8630 N Lombard St, Portland, OR 97203", "(503) 289-2005");
-    var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", "fancy", 3, "Nuestra Cocina", "Mexican", "nuestra.jpg", "2135 SE Division St, Portland, OR 97202", "(503) 232-2135");
+    var azteca = new RestMaker(false, "Mexican", "full-bar", "traditional", 1, "Burrito Azteca", "Delicious burritos and margaritas.", "azteca.jpg", "1942 N Rosa Parks Way, Portland, OR 97217", "(503) 841-6667");
+    var santeria = new RestMaker(false, "Mexican", "full-bar", "hip", 1, "Santeria", "Hidden, just off of SW Broadway, this place is a Portland original.", "santeria.jpg", "703 SW Ankeny St, Portland, OR 97205", "(503) 956-7624");
+    var santaCruz = new RestMaker(false, "Mexican", "full-bar", "traditional" , 1, "Tacqueria Santa Cruz", "Great place for tacos and burritos in St. John's.", "santa_cruz.jpg", "8630 N Lombard St, Portland, OR 97203", "(503) 289-2005");
+    var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", "fancy", 3, "Nuestra Cocina", "Get your high-end Mexican cuisine here.", "nuestra.jpg", "2135 SE Division St, Portland, OR 97202", "(503) 232-2135");
 
     allRestaurants.push(pokPok, nongs, khunPics, langBaan, shandong, hkCafe, goodTaste, hungFarLow, franksNoodleHouse, bambooSushi, boxerRamen, marukinRamen, biwa, mekha, lucLac, phoOregon, bestBauguette, nedLudd, swiftUnion, russellStBbq, theCoop, azteca, santeria, santaCruz, nuestraCocina, beauThai, charleysPhilly);
     $(".user_name").append(user.userName);
@@ -137,6 +139,8 @@ $(function(){
     $('li').click(function() {
       if ($(this).children().length === 0){
         $(this).siblings().children().empty();
+        $("#img-here").empty();
+        $("#img-here").append("<img class='show-image'src='img/"+displayArray[this.id].image+"'></img>");
         $("#"+this.id).append("<ul class='restInfo "+this.id+"'></ul>");
 
         if(displayArray[this.id].delivery){
@@ -158,6 +162,7 @@ $(function(){
 
       }else {
         $(this).children().remove();
+        $("#img-here").empty();
       }
 
     });

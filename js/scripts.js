@@ -87,7 +87,7 @@ $(function(){
     // THAI
     var pokPok = new RestMaker(false,"Thai","full-bar", "hip", 3,"Pok Pok", "Those Wings!", "pok_pok.jpg", "3226 SE Division St, Portland, OR 97202", "503-232-1387");
     var nongs = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Nongs Khao Man Gai", "Chicken and rice!","nong.jpg", "609 SE Ankeny St, Suite C", "503-740-2907");
-    var beauThai = new RestMaker(true, "Thai", "beer-wine", "hip", 1, "Beau Thai", "Awesome food with delivery late at night. ","IMG HERE", "730 NW 21st ave Portland, OR 97209", "(971) 344-2564");
+    var beauThai = new RestMaker(true, "Thai", "beer-wine", "hip", 1, "Beau Thai", "Awesome food with delivery late at night. ","beau-thai.jpg", "730 NW 21st ave Portland, OR 97209", "(971) 344-2564");
 
     var khunPics = new RestMaker(false, "Thai", "beer-wine", "traditional", 2, "Khun Pic's", "Seriously authentic","khun-pic.jpg", "3429 SE Belmont St., Portland OR 97214", "503-235-1610");
     var langBaan = new RestMaker(false, "Thai", "beer-wine", "fancy", 4, "Langbaan", "Excellent option along SE 28th bustling corridor. ","langbaan.jpg", "6 SE 28th Ave Portland, OR 97214", "(971) 344-2564");
@@ -117,13 +117,13 @@ $(function(){
     var swiftUnion = new RestMaker(false, "American", "full-bar", "hip", 2, "Swift and Union", "American", "s-union.jpg", "8103 N Denver Ave, Portland, OR 97217", "(503) 206-4281");
     var russellStBbq = new RestMaker(false, "American", "full-bar", "traditional" , 2, "Russell St. BBQ", "American", "russell.jpg", "325 NE Russell St, Portland, OR 97212", "(503) 528-8224");
     var theCoop = new RestMaker(false, "American", "full-bar", "hip", 1, "The Coop", "Rotesserie ribs, chicken, and plenty of outdoor seating.", "coop.jpg", "6214 N Interstate Ave, Portland, OR 97217");
-    var charleysPhilly = new RestMaker(true, "American", "beer-wine", "hip", 2, "Charley's Philly Steaks", "Good Philly Cheese Steaks.", "IMG HERE", "1200 SE 82nd ave Happy Valley, OR 97086");
+    var charleysPhilly = new RestMaker(true, "American", "none", "traditional", 1, "Charley's Philly Steaks", "Good Philly Cheese Steaks.", "philly.jpg", "1200 SE 82nd ave Happy Valley, OR 97086");
 
     //MEXICAN
-    var azteca = new RestMaker(false, "Mexican", "full-bar", "traditional", 1, "Burrito Azteca", "Mexican", "azteca.jpg", "1942 N Rosa Parks Way, Portland, OR 97217", "(503) 841-6667");
-    var santeria = new RestMaker(false, "Mexican", "full-bar", "hip", 1, "Santeria", "Mexican", "santeria.jpg", "703 SW Ankeny St, Portland, OR 97205", "(503) 956-7624");
-    var santaCruz = new RestMaker(false, "Mexican", "full-bar", "traditional" , 1, "Tacqueria Santa Cruz", "Mexican", "santa_cruz.jpg", "8630 N Lombard St, Portland, OR 97203", "(503) 289-2005");
-    var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", "fancy", 3, "Nuestra Cocina", "Mexican", "nuestra.jpg", "2135 SE Division St, Portland, OR 97202", "(503) 232-2135");
+    var azteca = new RestMaker(false, "Mexican", "full-bar", "traditional", 1, "Burrito Azteca", "Delicious burritos and margaritas.", "azteca.jpg", "1942 N Rosa Parks Way, Portland, OR 97217", "(503) 841-6667");
+    var santeria = new RestMaker(false, "Mexican", "full-bar", "hip", 1, "Santeria", "Hidden, just off of SW Broadway, this place is a Portland original.", "santeria.jpg", "703 SW Ankeny St, Portland, OR 97205", "(503) 956-7624");
+    var santaCruz = new RestMaker(false, "Mexican", "full-bar", "traditional" , 1, "Tacqueria Santa Cruz", "Great place for tacos and burritos in St. John's.", "santa_cruz.jpg", "8630 N Lombard St, Portland, OR 97203", "(503) 289-2005");
+    var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", "fancy", 3, "Nuestra Cocina", "Get your high-end Mexican cuisine here.", "nuestra.jpg", "2135 SE Division St, Portland, OR 97202", "(503) 232-2135");
 
     allRestaurants.push(pokPok, nongs, khunPics, langBaan, shandong, hkCafe, goodTaste, hungFarLow, franksNoodleHouse, bambooSushi, boxerRamen, marukinRamen, biwa, mekha, lucLac, phoOregon, bestBauguette, nedLudd, swiftUnion, russellStBbq, theCoop, azteca, santeria, santaCruz, nuestraCocina, beauThai, charleysPhilly);
     $(".user_name").append(user.userName);

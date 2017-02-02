@@ -105,6 +105,8 @@ $(function(){
     $(".form_content").show();
     $(".output_content").hide();
     $(".user_name").empty();
+    $("#img-here").empty();
+    
     document.getElementById("user_input_form").reset();
   });
   $("#button").click(function(){

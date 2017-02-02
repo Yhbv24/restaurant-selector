@@ -99,6 +99,11 @@ var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", "fancy", 3, "Nue
 
 
 $(function(){
+  $("#home").click(function() {
+    $(".form_content").show();
+    $(".output_content").hide();
+    document.getElementById("user_input_form").reset();
+  });
   $("#button").click(function(){
     $(".splash").hide();
     $(".form_content").show();
@@ -189,6 +194,8 @@ $(function(){
         $(this).children().remove();
         $("#img-here").empty();
       }
+
+
 
     });
   });

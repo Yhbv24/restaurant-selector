@@ -99,6 +99,11 @@ var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", "fancy", 3, "Nue
 
 
 $(function(){
+  $("#home").click(function() {
+    $(".form_content").show();
+    $(".output_content").hide();
+    document.getElementById("user_input_form").reset();
+  });
   $("#button").click(function(){
     $(".splash").hide();
     $(".form_content").show();
@@ -119,7 +124,7 @@ $(function(){
     $(".price").removeClass("error");
     $(".vibe").removeClass("error");
     $("div.error").remove();
-    
+
     if (userPrice !== null && userName !== "" && userVibe !== null){
       allRestaurants = [];
       user = new UserMaker(userDelivery,userCuisine,userLibations,userVibe,userPrice,userName,userAddress);
@@ -127,7 +132,7 @@ $(function(){
       $(".output_content").show();
     } else {
       allRestaurants=[];
-      
+
       if(userName=== ""){
         $(".name p").remove();
         $(".name").addClass("error").append("<div class='error'><p>Please enter your name</p></div>");
@@ -190,6 +195,8 @@ $(function(){
         $(this).children().remove();
         $("#img-here").empty();
       }
+
+
 
     });
   });

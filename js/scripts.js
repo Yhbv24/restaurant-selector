@@ -78,7 +78,18 @@ $(function(){
       $(".output_content").show();
     } else {
       allRestaurants=[];
-      alert("Please fill out missing information");
+      
+      if(userName=== ""){
+        $(".name").addClass("error").append("<p class='error'>Please enter your name</p>");
+      }
+      if(userPrice === null){
+        $(".price").addClass("error").append("<p class='error'>Please enter your price range</p>");
+      }
+      if(userVibe === undefined){
+        $(".vibe").addClass("error").append("<p class='error'>Please enter your price range</p>");
+      }
+      console.log(userVibe);
+      // alert("Please fill out missing information");
     }
 
     $("input[name=cuisine]:checked").each(function(){

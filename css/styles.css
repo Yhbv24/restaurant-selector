@@ -33,6 +33,11 @@ body {
   text-align: center;
 }
 
+.error {
+  color: red;
+  font-size: 1.1em;;
+}
+
 ul {
   list-style: none;
 }

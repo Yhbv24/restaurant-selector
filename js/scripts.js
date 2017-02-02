@@ -106,7 +106,7 @@ $(function(){
     $(".output_content").hide();
     $(".user_name").empty();
     $("#img-here").empty();
-    
+
     document.getElementById("user_input_form").reset();
   });
   $("#button").click(function(){
@@ -164,7 +164,7 @@ $(function(){
     var liID = 0;
     var displayArray = user.dataChecker();
     for(i=0;i<5;i++){
-      $("#rest-list").append("<li id='" + liID + "'>" + displayArray[i].restName + "</li>");
+      $("#rest-list").append("<li class='hover-effects'id='" + liID + "'>" + displayArray[i].restName + "</li>");
       liID ++;
     }
     $(".rest-name").append(user.userName);

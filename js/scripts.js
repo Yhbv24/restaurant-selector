@@ -111,9 +111,15 @@ $(function(){
     var userLibations = $("input[name=libations]:checked").val();
     var userAddress = "123 ave";
     var userPrice = $("select[name=price]").val();
-    var userVibe = $("input[name=vibe]:checked").val();
+    var userVibe = $("select[name=vibe]").val();
     var user;
 
+    console.log(userVibe);
+    $(".name").removeClass("error");
+    $(".price").removeClass("error");
+    $(".vibe").removeClass("error");
+    $("div.error").remove();
+    
     if (userPrice !== null && userName !== "" && userVibe !== null){
       allRestaurants = [];
       user = new UserMaker(userDelivery,userCuisine,userLibations,userVibe,userPrice,userName,userAddress);
@@ -123,15 +129,17 @@ $(function(){
       allRestaurants=[];
       
       if(userName=== ""){
-        $(".name").addClass("error").append("<p class='error'>Please enter your name</p>");
+        $(".name p").remove();
+        $(".name").addClass("error").append("<div class='error'><p>Please enter your name</p></div>");
       }
       if(userPrice === null){
-        $(".price").addClass("error").append("<p class='error'>Please enter your price range</p>");
+        $(".price p").remove();
+        $(".price").addClass("error").append("<div class='error'><p>Please enter your price range</p></div>");
       }
-      if(userVibe === undefined){
-        $(".vibe").addClass("error").append("<p class='error'>Please enter your price range</p>");
+      if(userVibe === null){
+        $(".price p").remove();
+        $(".vibe").addClass("error").append("<div class='error'><p>Please enter your price range</p></div>");
       }
-      console.log(userVibe);
       // alert("Please fill out missing information");
     }
 

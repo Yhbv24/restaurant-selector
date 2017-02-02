@@ -53,7 +53,6 @@ UserMaker.prototype.dataChecker = function(){
 
   return allRestaurants.sort(function(a,b){return a.counter - b.counter;}).reverse();
 
-<<<<<<< HEAD
 }
 //Fake Database
 
@@ -97,7 +96,6 @@ var azteca = new RestMaker(false, "Mexican", "full-bar", "traditional", 1, "Burr
 var santeria = new RestMaker(false, "Mexican", "full-bar", "hip", 1, "Santeria", "Hidden, just off of SW Broadway, this place is a Portland original.", "santeria.jpg", "703 SW Ankeny St, Portland, OR 97205", "(503) 956-7624");
 var santaCruz = new RestMaker(false, "Mexican", "full-bar", "traditional" , 1, "Tacqueria Santa Cruz", "Great place for tacos and burritos in St. John's.", "santa_cruz.jpg", "8630 N Lombard St, Portland, OR 97203", "(503) 289-2005");
 var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", "fancy", 3, "Nuestra Cocina", "Get your high-end Mexican cuisine here.", "nuestra.jpg", "2135 SE Division St, Portland, OR 97202", "(503) 232-2135");
-=======
 };
 
 $(function(){

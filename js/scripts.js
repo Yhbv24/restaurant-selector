@@ -53,7 +53,7 @@ UserMaker.prototype.dataChecker = function(){
 
   return allRestaurants.sort(function(a,b){return a.counter - b.counter;}).reverse();
 
-}
+};
 //Fake Database
 
 // THAI
@@ -114,12 +114,11 @@ $(function(){
     var userVibe = $("select[name=vibe]").val();
     var user;
 
-    console.log(userVibe);
     $(".name").removeClass("error");
     $(".price").removeClass("error");
     $(".vibe").removeClass("error");
     $("div.error").remove();
-    
+
     if (userPrice !== null && userName !== "" && userVibe !== null){
       allRestaurants = [];
       user = new UserMaker(userDelivery,userCuisine,userLibations,userVibe,userPrice,userName,userAddress);
@@ -127,18 +126,18 @@ $(function(){
       $(".output_content").show();
     } else {
       allRestaurants=[];
-      
+
       if(userName=== ""){
         $(".name p").remove();
-        $(".name").addClass("error").append("<div class='error'><p>Please enter your name</p></div>");
+        $(".name").addClass("error").append("<div class='error animated shake'><p>Please enter your name</p></div>");
       }
       if(userPrice === null){
         $(".price p").remove();
-        $(".price").addClass("error").append("<div class='error'><p>Please enter your price range</p></div>");
+        $(".price").addClass("error").append("<div class='error animated shake'><p>Please enter your price range</p></div>");
       }
       if(userVibe === null){
-        $(".price p").remove();
-        $(".vibe").addClass("error").append("<div class='error'><p>Please enter your price range</p></div>");
+        $(".vibe p").remove();
+        $(".vibe").addClass("error").append("<div class='error animated shake'><p>Please enter your vibe</p></div>");
       }
       // alert("Please fill out missing information");
     }
@@ -166,8 +165,8 @@ $(function(){
         $(this).siblings().children().remove();
         $(this).children().empty();
         $("#img-here").empty();
-        $("#img-here").append("<img class='show-image'src='img/"+displayArray[this.id].image+"'></img>");
-        $("#"+this.id).append("<ul class='restInfo "+this.id+"'></ul>");
+        $("#img-here").append("<img class='show-image animated fadeIn'src='img/"+displayArray[this.id].image+"'></img>");
+        $("#"+this.id).append("<ul class='restInfo animated fadeIn "+this.id+"'></ul>");
 
         if(displayArray[this.id].delivery){
           $("."+this.id).append("<li>Delivery: Yes</li>");

@@ -50,6 +50,15 @@ li {
   font-size: .6em;
 }
 
+.hover-effects:hover {
+  animation: pulse 1s;
+  color: #e59090;
+}
+
+.hover-effects ul {
+  color: white;
+}
+
 #welcome {
   font-family: 'Ultra', serif;
   color: #b77033;

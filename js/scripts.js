@@ -104,6 +104,7 @@ $(function(){
     $("#rest-list").empty();
     $(".form_content").show();
     $(".output_content").hide();
+    $(".user_name").empty();
     document.getElementById("user_input_form").reset();
   });
   $("#button").click(function(){
@@ -112,7 +113,8 @@ $(function(){
   });
   $("form#user_input_form").submit(function(event){
     event.preventDefault();
-    var userName = $("input[name=name]").val();
+    var userName;
+    userName = $("input[name=name]").val();
     var userDelivery = $("input[name=delivery]:checked").val();
     var userCuisine = [];
     var userLibations = $("input[name=libations]:checked").val();

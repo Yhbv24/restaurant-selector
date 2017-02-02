@@ -100,6 +100,7 @@ var nuestraCocina = new RestMaker(false, "Mexican", "full-bar", "fancy", 3, "Nue
 
 $(function(){
   $("#home").click(function() {
+    allRestaurants=[];
     $(".form_content").show();
     $(".output_content").hide();
     document.getElementById("user_input_form").reset();

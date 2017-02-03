@@ -76,7 +76,7 @@ var shandong = new RestMaker(true,"Chinese","full-bar", "casual", 1, "Shandong",
 var hungFarLow = new RestMaker(true,"Chinese","full-bar", "hip", 1, "Hung Far Low", "Relocated to SE 82nd, Hung Far Low still makes solid Chinese food and poors stiff drinks.", "hungfarlow.jpg", "2410 SE 82nd Ave, Portland, OR 97216", "503-223-8686");
 var hkCafe = new RestMaker(true,"Chinese","full-bar", "traditional", 2, "HK Cafe", "Great spot for dimsum.", "hkcafe.jpg", "4410 SE 82nd Ave, Portland, OR 97266", "(503) 771-8866");
 var goodTaste = new RestMaker(true,"Chinese","full-bar", "traditional" ,1, "Good Taste", "Great Chinese food in the heart of NW China Town.", "goodtaste.jpg", "18 Nw 4th Ave Portland, OR 97209", "(503) 223-3838");
-var franksNoodleHouse = new RestMaker(true,"Chinese","beer-wine", "casual", 1, "Good Taste", "Handmade noodles and an offering of Korean classics as well.", "franks.jpg", "822 NE Broadway St, Portland, OR 97232", "(503) 288-1007");
+var franksNoodleHouse = new RestMaker(true,"Chinese","beer-wine", "casual", 1, "Frank's Noodle House", "Handmade noodles and an offering of Korean classics as well.", "franks.jpg", "822 NE Broadway St, Portland, OR 97232", "(503) 288-1007");
 
 //VIETNAMESE
 var mekha = new RestMaker(false, "Vietnamese", "full-bar", "casual", 1,"Mekha Noodle House", "Great place for pho and Cambodian cuisine.  Hint: Try the spicy lemongrass paste in your pho!", "mehka.jpg", "6846 NE Sandy Blvd Portland, OR 97213", "(503) 719-4584");
